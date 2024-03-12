@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 echo 1;
 ?>
@@ -10,3 +11,8 @@ index e69de29..ac60739 100644
 +<?php
 +echo 1;
 +?>
+=======
+<?txt
+echo 'test2';
+?>
+>>>>>>> change_site
