@@ -6,14 +6,14 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     private float t;
-    private Action OnTimerCompleted;
+    private Action onTimerCompleted;
     public delegate void TimerCallBack();
 
     private TimerCallBack timerCallBack;
-    public void SetT(float t, TimerCallBack timerCallBack)
+    public void SetT(float t, Action onTimerCompleted)
     {
         this.t = t;
-        this.timerCallBack += timerCallBack;
+        this.onTimerCompleted = onTimerCompleted;
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
             t -= Time.deltaTime;
             if (isTimerCompleted())
             {
-                timerCallBack();
+                onTimerCompleted();
             }
         }
         

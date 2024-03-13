@@ -11,7 +11,10 @@ public class TimerTesting : MonoBehaviour
     
     private void Start()
     {
-        timer.SetT(1f,ff);
+        timer.SetT(1f,()=>
+        {
+            Debug.Log(222);
+        });
     }
 
     void ff()
